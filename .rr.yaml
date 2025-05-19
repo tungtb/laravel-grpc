@@ -1,7 +1,18 @@
 version: "3"
 server:
   command: "php grpc-worker.php"
+  relay: "pipes"
+  relay_timeout: "20s"
 grpc:
   listen: "tcp://0.0.0.0:9001"
   proto:
     - "proto/example.proto"
+  pool:
+    num_workers: 1
+    max_jobs: 1
+    debug: false
+logs:
+  mode: development
+  encoding: console
+  level: debug
+  output: stderr

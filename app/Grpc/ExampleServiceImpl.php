@@ -4,7 +4,7 @@ namespace App\Grpc;
 use Example\ExampleServiceInterface;
 use Example\HelloRequest;
 use Example\HelloResponse;
-use Spiral\GRPC;
+use Spiral\RoadRunner\GRPC;
 
 class ExampleServiceImpl implements ExampleServiceInterface
 {
